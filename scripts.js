@@ -10,6 +10,9 @@ listElements = document.querySelectorAll('li')
 listElements.forEach(item => {
     item.addEventListener('mousedown', () => {
         item.classList.toggle('completed')
+        item.addEventListener('mousedown', () => {
+            item.remove()
+        })
     })
 })
 
@@ -19,6 +22,9 @@ function addToList() {
     if(content.value!="") {
         listElement.addEventListener('mousedown', () => {
             listElement.classList.toggle('completed')
+            listElement.addEventListener('mousedown', () => {
+                listElement.remove()
+            })
         })
         toDoList.appendChild(listElement)
         content.value = ""
