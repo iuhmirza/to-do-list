@@ -4,6 +4,7 @@ html, body, h1, ul, li, input {
     margin: 0;
     padding: 0;
     font-family: 'Permanent Marker', cursive;
+    list-style-type: none;
 }
 
 body{
@@ -46,7 +47,6 @@ li {
     background-color: hsl(0, 20%, 95%);
     width: 80vw;
     height: 80vh;
-    padding: 2vw;
     align-items: center;
 }
 
@@ -54,4 +54,8 @@ li {
     color: hsl(0, 0%, 75%);
     font-family: 'Permanent Marker', cursive;
     resize: none;
+}
+
+.completed {
+    text-decoration-line: line-through;
 }
