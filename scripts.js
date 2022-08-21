@@ -1,10 +1,9 @@
 const toDoList = document.querySelector('#to-do-list')
 const content = document.querySelector('#list-element-content')
 const pad = document.querySelector('#pad')
-const writing = document.querySelector('#writing')
 
-const addButton = document.querySelector('#addButton')
-addButton.addEventListener('mousedown', addToList)
+const plus = document.querySelector('#addButton')
+plus.addEventListener('mousedown', addToList)
 
 listElements = document.querySelectorAll('li')
 listElements.forEach(strikeAndRemove)
@@ -21,10 +20,11 @@ function strikeAndRemove(item) {
 function addToList() {
     const listElement = document.createElement('li')
     listElement.textContent = content.value
-    if(content.value!="") {
-        strikeAndRemove(listElement)
-        toDoList.appendChild(listElement)
-        content.value = ""
+    if((content.value!="")
+        && !(toDoList.offsetHeight > pad.offsetHeight*(0.6))) {
+            strikeAndRemove(listElement)
+            toDoList.appendChild(listElement)
+            content.value = ""
     }
 }
 
