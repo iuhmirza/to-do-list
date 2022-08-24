@@ -2,6 +2,13 @@ const toDoList = document.querySelector('#to-do-list')
 const content = document.querySelector('#list-element-content')
 const pad = document.querySelector('#pad')
 
+const writing = document.querySelector('#list-element-content')
+writing.addEventListener('keydown', (event) => {
+    if(event.keyCode === 13) {
+        addToList()
+    }
+})
+
 const plus = document.querySelector('#addButton')
 plus.addEventListener('mousedown', addToList)
 
