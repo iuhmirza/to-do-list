@@ -10,7 +10,7 @@ html, body, h1, ul, li, input, button {
 
 body{
     height: 100vh;
-    background-color: hsl(0, 65%, 60%);
+    background-color: hsl(230, 65%, 60%);
     color: hsl(0, 5%, 20%)
 
 }
@@ -23,10 +23,16 @@ h1 {
 li {
     font-family: 'Kalam', cursive;
     font-size: calc(16px + 2vw);
+    transition: all 0.1s ease-in-out;
+
 }
 
-li:hover{
-    text-decoration-line: line-through;
+li:hover {
+    transform: scale(1.05);
+}
+
+li:active {
+    transform: scale(0.95)
 }
 
 .flex {
@@ -62,17 +68,33 @@ li:hover{
     border: none;
     resize: none;
     outline: none;
+    font-size: calc(12px + 2vw)
 }
 
 .plus {
-    padding: 4px;
     background: none;
+    font-size: calc(32px + 2vw);
+    font-weight: 900;
 }
 
 .plus:hover {
     transform: scale(1.1);
+    color: hsl(120, 65%, 60%);
+}
+
+.plus:active {
+    transform: scale(1);
 }
 
 .completed {
     text-decoration-line: line-through;
+}
+
+.completed:hover {
+    color: brown;
+}
+
+.transition {
+    transition: all 0.1s ease-out;
+    
 }
